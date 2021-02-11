@@ -1,1 +1,18 @@
+<div style="margin: 16px;">
+  <h1>All restaurants</h1>
+  <br>
+  <p> <%= link_to "Add your restaurant", new_restaurant_path %> </p>
+  <br>
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <% @restaurants.each do |restaurant|%>
+        <li class="list-group-item"><%= link_to "#{restaurant.name}", restaurant_path(restaurant) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+
+
 
